@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SALFA - CONTROL AVANCE</title>
+
+    <!-- BOOTSTRAP STYLES-->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/css/font-awesome.css" rel="stylesheet" />
+	<!--<link href="assets/css/custom.css" rel="stylesheet" />-->
+
+    <!-- Vsoft CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/paneles.css" rel="stylesheet">
+    <link href="css/comun.css" rel="stylesheet">
+
+	<!-- Core JavaScript Files -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+
+    <script src="js/jquery-1.8.3.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.js"></script>
+	
+	<script language="javascript">
+		function ver_paso_2(id){
+		
+		var paso_1 = $("#paso_1");
+		var paso_2 = $("#paso_2");
+		
+		paso_1.css("display",(paso_1.css("display")=="none"?"block":"none"));
+		paso_2.css("display",(paso_2.css("display")=="none"?"block":"none"));
+		}
+	</script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+	<div class="panel panel-default no-bg no-border">
+		<div class="panel-heading no-border">
+			Control de Avance
+		</div>
+	  <div class="panel-body no-padding">
+	  	<div class="content_boxes">
+			<div class="boxes uno camiones">
+
+				<div class="boxe diagnostico">
+					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_camion">
+                      <div class="icon_truck"></div>
+                    </button>
+                    <button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						ANTARESMAQUINARIAS LTDA<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						0012478 - 25/12
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador excede"></div>
+						 <div class="horas">20</div>
+					</div>
+
+					<div id="paso_1" style="display:block;">
+						<div class="avance_real barras" onclick="ver_paso_2()">
+							<div class="indicador"></div>
+							<div class="horas">68%</div>
+						</div>
+					</div>
+					<div id="paso_2" class="lista_tareas" style="display:none;">
+						<div class="avance_real barras">
+							<select class="form-control">
+							  <option onclick="ver_paso_2()">10%</option>
+							  <option onclick="ver_paso_2()">20%</option>
+							  <option onclick="ver_paso_2()">30%</option>
+							  <option onclick="ver_paso_2()">40%</option>
+							  <option onclick="ver_paso_2()">50%</option>
+							  <option onclick="ver_paso_2()">60%</option>
+							  <option onclick="ver_paso_2()">70%</option>
+							  <option onclick="ver_paso_2()">80%</option>
+							  <option onclick="ver_paso_2()">90%</option>
+							  <option onclick="ver_paso_2()">100%</option>
+							</select>
+						</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_reparacion ">
+					<div class="icon_truck"></div>
+
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea"></div>
+					<div class="info">
+						ASFALMIX SA<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera en_reparacion ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						BOZIC INGENIERÍA Y CONSTRUCCIÓN LIMITADA<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera en_reparacion ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						CANTERAS LONCO S.A.<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera diagnostico ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						CASIANO ANDRADE<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador excede"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe vacio">	
+				</div>
+				<div class="boxe diagnostico ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						Constructora Mayor Ltda<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_reparacion ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea"></div>
+					<div class="info">
+						CONSTRUCTORA RAVANAL S.A.<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera en_reparacion ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						Constructora Remfisc Ltda.<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera en_reparacion ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						CONSTRUCTORA RIVERA LTDA.<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador excede"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera diagnostico ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						Consultora Hidrocuenca<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera diagnostico ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						Contructora y Servicio Entrerios<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera diagnostico ">
+					<div class="icon_truck"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						CRISTIAN MENDOZA SANHUEZA<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+
+			</div>
+			<div class="boxes dos maquinaria">
+				<!--<h1 class="title">Maquinaria</h1>-->
+				<div class="boxe diagnostico ">
+					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_maquinaria">
+                          <div class="icon_retro"></div>
+                    </button>
+                    <button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						EMPRESA CONSTRUCTORA BELLOLIO LTDA.  <br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador excede"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_reparacion ">
+					<div class="icon_retro"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_tarea"></div>
+					<div class="info">
+						EMPRESA CONSTRUCTORA PAOLA LAMAS<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador excede"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera en_reparacion ">
+					<div class="icon_retro"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						EMPRESA CPNSTRUCTORA CONSTRUSUR LIMITADA<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe vacio">
+					
+				</div>
+				<div class="boxe diagnostico ">
+					<div class="icon_retro"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						GABRIEL ANTONIO BARRERA BARRERA<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_reparacion ">
+					<div class="icon_retro"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_tarea"></div>
+					<div class="info">
+						I. MUNICIPALIDAD DE BULNES.<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera en_reparacion ">
+					<div class="icon_retro"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						I. MUNICIPALIDAD DE COIHUECO<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+				<div class="boxe en_espera diagnostico ">
+					<div class="icon_retro"></div>
+					<button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#edit_maquinaria" type="button">
+						<i class="fa fa-list"></i>
+                    </button>
+					<div class="icon_pendiente"></div>
+					<div class="icon_tarea reparacion"></div>
+					<div class="info">
+						I. MUNICIPALIDAD DE SAN IGNACIO<br/>
+						Patente - ZS 78 98<br/>
+						Num. Interno - 421<br/>
+					</div>
+					<div class="ot">
+						OT - 0012478
+					</div>
+					<div class="icon_tiempo">
+						<span class="horas">24H</span>
+					</div>
+					<div class="indicador_tiempo barras">
+						 <div class="indicador"></div>
+						 <div class="horas">20</div>
+					</div>
+					<div class="avance_real barras">
+						 <div class="indicador"></div>
+						 <div class="horas">68%</div>
+					</div>
+					<div class="tecnico">
+							Oscar Burgos
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+    <!-- MODAL WINDOWS -->
+	<div 
+	class="modal fade detalle_actividad camion" 
+	id="myModal_camion" 
+	tabindex="-1" 
+	role="dialog" 
+	aria-labelledby="myModalLabel" 
+	aria-hidden="true"
+	>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="pull-right btn btn-default" data-dismiss="modal" aria-hidden="true">
+                    	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                    	Detalle Camion - Detenido : En espera de repuestos
+                    </h4>
+                    <div class="clear"></div>
+                </div>
+                <div class="modal-body">
+                	<iframe src="detalle.html" frameborder="0" width="100%" height="720px"></iframe>
+					<div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div 
+	class="modal fade detalle_actividad maquinaria" 
+	id="myModal_maquinaria" 
+	tabindex="-1" 
+	role="dialog" 
+	aria-labelledby="myModalLabel" 
+	aria-hidden="true"
+	>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                    	Detalle Maquinaria - Detenido : En espera de repuestos
+                    </h4>
+                </div>
+                <div class="modal-body">
+                	<div class="row">
+	                    <div class="col-md-6">
+							<div class="section">
+								Cliente : INVERSIONES INB LTDA</br>
+								Contacto : Jose Caro</br>
+								Mail : jcaro@antaresmaquinarias.cl</br>
+								Fono : + 56 9 222 478 987
+							</div>
+							<div class="section">
+								<div class="info">
+									Marca : JOHN DEERE</br>
+									Modelo : 310J</br>
+									A&ntilde;o : 2014</br>
+									Patente : ZV 99 98</br>
+									VIN : 
+								</div>
+								<img class="imagen" src="img/modelo_retro.jpg" height="91" alt="">
+								<div class="clear"></div>
+							</div>
+							<div class="section historial">
+								<h1>Historial de atenciones</h1>
+								<div class="history">
+									<div class="head">
+										<div>N&deg; OT</div>
+										<div>Fecha</div>
+										<div>Tipo OT</div>
+										<div>T&eacute;cnico</div>
+										<div class="large">Diagn&oacute;stico</div>
+									</div>
+									<div class="row">
+										<div>177</div>
+										<div>1/6/13</div>
+										<div>Mantenci&oacute;n</div>
+										<div>O.Burgos</div>
+										<div class="large">Mantenci&oacute;n 5.000 KM</div>
+									</div>
+									<div class="row">
+										<div>333</div>
+										<div>4/12/13</div>
+										<div>Reparaci&oacute;n</div>
+										<div>O.Burgos</div>
+										<div class="large">Corte eje trasero izq.</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="section">
+								<span>Fecha recepci&oacute;n : 16/09/2014 </span>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>Hora : 11:53</span></br>
+								Tipo OT : Mantenci&oacute;n
+								></br>
+								N&deg; OT : 785490
+								<div class="observaciones">
+									<div class="title">Observaciones recepci&oacute;n</div>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.
+								</div>
+								<div class="observaciones">
+									<div class="title">Observaciones preevaluaci&oacute;n</div>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.
+								</div>
+								<div class="observaciones">
+									<div class="title">Diagn&oacute;stico</div>
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.
+								</div>
+								<div class="observaciones">
+									<div class="col-md-6">
+										<div class="title">Repuestos</div>
+									</div>
+									<div class="col-md-6">
+										<div class="title">Operaciones</div>
+										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="clear"></div>
+                	</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div class="modal fade" id="edit_maquinaria" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                    	 ASFALMIX SA - ZS 78 98 / 421
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+	                    <div class="col-md-6">
+	                        <div class="panel panel-default">
+		                        <div class="panel-heading">
+		                            Estado: En Reparación - Sub Estado Actual
+		                        </div>
+			                       
+			                    <div class="panel-body">
+			                    	<div class="row">
+				                    	<div class="col-md-4">
+											<span>Nuevo estado:</span>
+				                    	</div>
+				                    	<div class="col-md-8">
+				                    		<script src="js/combo.js"></script>
+				                    		<select class="form-control" id='select1' onchange='cargarSelect2(this.value);'> 
+							                    <option value='0'>Selecciona una opcion</option> 
+							                    <option value='1'>Entrantes</option> 
+							                    <option value='2'>En Terreno</option> 
+							                    <option value='3'>En Espera</option> 
+							                    <option value='4'>Salientes</option> 
+							                </select> 
+				                    	</div>
+			                    	</div>
+			                    	<div class="row">
+
+			                    		<div class="col-md-4">
+											
+				                    	</div>
+				                    	<div class="col-md-8">
+				                    		 <select class="form-control" id='select2' onchange='seleccinado_select2();' disabled> 
+							                    <option value='0'>Selecciona una opcion</option> 
+							                </select> 
+				                    	</div>
+			                    	</div>
+		                        </div>
+		                    </div>
+		                </div>
+	                    <div class="col-md-6">
+	                        <div class="panel panel-default">
+		                        <div class="panel-heading">
+		                            Ubicación: TALLER
+		                        </div>
+			                       
+			                    <div class="panel-body">
+			                    	<div class="row">
+				                    	<div class="col-md-4">
+											<span>Nueva ubicacion:</span>
+				                    	</div>
+				                    	<div class="col-md-8">
+				                    		<select class="form-control">
+		                                        <option>QA</option>
+		                                        <option>Eq. Entrantes</option>
+		                                        <option>Patio espera</option>
+		                                        <option>Patio terreno</option>
+		                                        <option>Eq. Salientes</option>
+		                                    </select>
+				                    	</div>
+			                    	</div>
+		                        </div>
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="row">
+	                    <div class="col-md-6">
+	                        <div class="panel panel-default">
+		                        <div class="panel-heading">
+		                            NAVE: 2 - Camiones
+		                        </div>
+			                       
+			                    <div class="panel-body">
+			                    	<div class="row">
+				                    	<div class="col-md-4">
+											<span>Asignar Nave:</span>
+				                    	</div>
+				                    	<div class="col-md-8">
+				                    		<select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+		                                    </select>
+				                    	</div>
+			                    	</div>
+		                        </div>
+		                    </div>
+		                </div>
+	                    <div class="col-md-6">
+	                        <div class="panel panel-default">
+		                        <div class="panel-heading">
+		                            Técnico: Jose Caro
+		                        </div>
+			                       
+			                    <div class="panel-body">
+			                    	<div class="row">
+				                    	<div class="col-md-4">
+											<span>Nuevo Técnico:</span>
+				                    	</div>
+				                    	<div class="col-md-8">
+				                    		<select class="form-control">
+		                                        <option>Marcelo Herrera</option>
+		                                        <option>Oscar Burgos</option>
+		                                        <option>Cristobal Trincado</option>
+		                                        <option>Norman Riquelme</option>
+		                                    </select>
+				                    	</div>
+			                    	</div>
+		                        </div>
+		                    </div>
+		                </div>
+	                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">CANCELAR</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

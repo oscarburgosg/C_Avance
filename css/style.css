@@ -1,0 +1,253 @@
+
+
+
+
+#preloader {
+    background: #1D1C2A;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#loaderInner {
+    background:#ffffff url(../img/spinner.gif) center center no-repeat;
+    height: 60px;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+}
+
+/************************************/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    width:100%;
+}
+
+/*********** HEAD DE BARRAS ****************/
+.head{
+  background: #2d2b45;
+  padding:1px 15px;
+  position: relative;
+  float:left;
+  width:100%;
+  height: 34px;
+}
+
+.head label{
+  margin:0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.42857;
+  text-transform: uppercase;
+  margin:7px 0;
+}
+
+
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+
+select.choose_state,
+select.choose_state option {
+    background: transparent;
+}
+select.choose_state {
+    border: 1px solid #000;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    outline: none;
+
+    float: right;
+    position: relative;
+    top: 35px;
+    margin-right: 15px;
+    font-size: 1.4em;
+}
+
+
+.row-offcanvas {
+  margin:0 0 0;
+  position: relative;
+  -webkit-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+
+.row-offcanvas-right {
+  right: 0;
+}
+
+.row-offcanvas-left {
+  left: 0;
+}
+
+.row-offcanvas-right .sidebar-offcanvas {
+  right: -100%; /* 6 columns */
+}
+
+.row-offcanvas-left .sidebar-offcanvas {
+  left: -40%; /* 6 columns */
+}
+
+.row-offcanvas-right.active {
+  right: 20%; /* 3 columns */
+}
+
+.row-offcanvas-left.active {
+  left: 40%; /* 6 columns */
+}
+
+.row-offcanvas-left.active {
+  left: 40%; /* 6 columns */
+}
+
+.sidebar-offcanvas {
+  position: absolute;
+  top: 0;
+}
+
+.row-offcanvas-left.active .panel_1{
+  margin: 0 0 0 -8%;
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) and (min-width: 991px){
+  
+  html{
+    border-bottom:orange 5px solid;
+  }
+
+}
+
+
+@media(min-width:767px) {
+
+  html{
+    border-bottom:green 5px solid;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  html{
+    border-bottom:purple 5px solid;
+  }
+  
+  .row-offcanvas-right .sidebar-offcanvas {
+    right: -80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -80%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 20%; /* 3 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active .panel_1{
+    margin: 0 0 0 -16%;
+  }
+
+  
+}
+
+@media (max-width:480px) {
+
+  html{
+    border-top:red 5px solid;
+  }
+  
+  .row-offcanvas-right .sidebar-offcanvas {
+    right: -80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -80%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 20%; /* 3 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active .panel_1{
+    margin: 0 0 0 -16%;
+  }
+      
+}
+
+/********************** BOTONES HEAD *****************************/
+
+.botones{
+  float:right;
+  position: absolute;
+  right:0;
+  top:0;
+}
+
+/********************** DESCRIPCION RESUMEN *********************/
+
+
+
+
+/********************** RESUMEN MAQUINA *********************/
+
+.sidebar .head{
+  margin:0 0 10px;
+}
+
+.sidebar .head label{
+  margin:7px 0;
+}
+
+.sidebar .detalle_inspeccion .row{
+  margin:0 0 5px;
+}
+
+.sidebar .detalle_inspeccion textarea{
+  height: 33px;
+}
+
+.sidebar .detalle_inspeccion p{
+  margin:10px 0;
+}
+
+.sidebar .mapeo_imagen{
+  margin:10px 0 0;
+}
+
+.nueva_capa{
+  overflow-x: hidden;
+  height:100%;
+}
+
